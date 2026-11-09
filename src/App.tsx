@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { SideSection } from "./components/sections/SideSection";
 
 function App() {
   return (
-    <>
-      <h1 className="font-bold font-space-grotesk">Hello World!</h1>
-    </>
+    <div className="h-screen">
+      <SideSection />
+    </div>
   );
 }
 
