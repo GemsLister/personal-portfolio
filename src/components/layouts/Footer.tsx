@@ -44,7 +44,7 @@ export const Footer = () => {
               <FontAwesomeIcon icon={faLinkedin} className="text-base" />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:jameslester.l.lopez@gmail.com"
               aria-label="Email Me"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition-colors hover:border-primary hover:bg-primary hover:text-white"
             >
