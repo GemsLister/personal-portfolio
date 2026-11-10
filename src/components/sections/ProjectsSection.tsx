@@ -4,7 +4,6 @@ import { ScrollButton } from "../buttons/ScrollButton";
 import PickleSlot from "../../assets/projects-image/pickleslot.png";
 import Fynlo from "../../assets/projects-image/fynlo.png";
 import { ProjectContainer } from "../containers/ProjectContainer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
@@ -52,10 +51,13 @@ export const ProjectsSection = () => {
   };
 
   return (
-    <section className="px-5 py-12 md:py-20 lg:py-24">
+    <section
+      id="projects"
+      className="scroll-mt-24 px-5 py-12 md:py-20 lg:py-24"
+    >
       <div className="mx-auto max-w-5xl">
         <div className="mb-6 flex items-center justify-between">
-          <h1 className="font-space-grotesk text-5xl font-bold text-primary">
+          <h1 className="font-space-grotesk text-4xl md:text-5xl font-bold text-primary tracking-tight">
             PROJECTS
           </h1>
 
