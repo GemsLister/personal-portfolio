@@ -1,9 +1,11 @@
-import { SideSection } from "./components/sections/SideSection";
-
+import { Header } from "./components/layouts/Header";
+import { HeroSection } from "./components/sections/HeroSection";
+import "animate.css";
 function App() {
   return (
-    <div className="h-screen">
-      <SideSection />
+    <div className="animate__animated animate__fadeIn h-screen w-screen">
+      <Header />
+      <HeroSection />
     </div>
   );
 }
