@@ -31,7 +31,7 @@ export const Footer = () => {
               <FontAwesomeIcon icon={faGithub} className="text-base" />
             </a>
             <a
-              href="https://www.linkedin.com/in/james-lester-lopez-0a6695366/"
+              href="https://www.linkedin.com/in/jameslesterlopez"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
