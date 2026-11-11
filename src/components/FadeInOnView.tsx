@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type FadeInOnViewProps = {
-  children: ReactNode;
+  children: React.ReactNode;
 };
 
 export const FadeInOnView = ({ children }: FadeInOnViewProps) => {
