@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Certificate, Folder, House, Mail, Wrench } from "lucide-react";
 
 const navLinks = [
-  { nav: "Projects", link: "#projects" },
-  { nav: "Technical Skills", link: "#tools" },
-  { nav: "Contact", link: "#contact" },
+  { nav: "Home", link: "#top", Icon: House },
+  { nav: "Projects", link: "#projects", Icon: Folder },
+  { nav: "Certifications", link: "#certifications", Icon: Certificate },
+  { nav: "Technical Skills", link: "#tools", Icon: Wrench },
+  { nav: "Contact", link: "#contact", Icon: Mail },
 ];
 
 export const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const updateScrollState = () => setIsScrolled(window.scrollY > 0);
+    const updateScrollState = () => setIsScrolled(window.scrollY > 24);
 
     updateScrollState();
     window.addEventListener("scroll", updateScrollState, { passive: true });
@@ -20,68 +21,75 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", updateScrollState);
   }, []);
 
-  const hasSolidBackground = isOpen || isScrolled;
-
   return (
-    <header
-      className={`sticky top-0 z-50 flex flex-wrap items-center justify-between px-6 py-4 transition-colors duration-300 ${
-        hasSolidBackground ? "bg-primary shadow-md" : "bg-transparent"
-      }`}
-    >
-      {/* Logo Box */}
+    <header className="sticky top-0 z-50 px-4 py-3">
       <div
-        className={`rounded-lg p-2.5 shadow-sm ${
-          hasSolidBackground ? "bg-white text-primary" : "bg-primary text-white"
+        className={`mx-auto flex min-h-14 w-fit items-center justify-center gap-6 rounded-full bg-brand-light-maroon px-5 py-2 shadow-lg transition-all duration-300 ease-out md:min-h-14 ${
+          isScrolled
+            ? "md:justify-center md:px-5"
+            : "md:w-full md:max-w-7xl md:justify-between md:rounded-none md:bg-transparent md:px-6 md:py-0 md:shadow-none"
         }`}
       >
-        <h1 className="font-space-grotesk font-bold text-lg leading-none">
-          JL
-        </h1>
+        <a
+          href="#top"
+          aria-label="James Lester Lopez — home"
+          className="rounded-lg bg-primary p-2 text-white shadow-sm transition-transform duration-300 hover:scale-105 md:hidden"
+        >
+          <span className="font-space-grotesk text-base font-bold leading-none">
+            JL
+          </span>
+        </a>
+
+        {!isScrolled && (
+          <a
+            href="#top"
+            aria-label="James Lester Lopez — home"
+            className="hidden rounded-lg bg-primary p-2.5 text-white shadow-sm transition-transform duration-300 hover:scale-105 md:block"
+          >
+            <span className="font-space-grotesk text-lg font-bold leading-none">
+              JL
+            </span>
+          </a>
+        )}
+
+        <nav id="main-navigation" aria-label="Main navigation">
+          <ul
+            className={`flex list-none flex-row items-center gap-1 ${
+              isScrolled ? "md:gap-1" : "md:gap-7"
+            }`}
+          >
+            {navLinks.map(({ nav, link, Icon }) => (
+              <li key={link}>
+                <a
+                  href={link}
+                  aria-label={nav}
+                  title={nav}
+                  className={`group flex items-center gap-2 rounded-full p-2.5 transition-all duration-300 ${
+                    isScrolled
+                      ? "text-white hover:bg-white/10 hover:text-white"
+                      : "text-white hover:bg-white/10 md:p-2 md:font-space-grotesk md:font-medium md:text-slate-800 md:hover:bg-transparent md:hover:text-primary"
+                  }`}
+                >
+                  <Icon
+                    size={20}
+                    aria-hidden="true"
+                    className={`h-6 w-6 ${isScrolled ? "" : "md:hidden"}`}
+                  />
+                  <span
+                    className={
+                      isScrolled
+                        ? "sr-only"
+                        : "sr-only md:not-sr-only md:text-base lg:text-lg"
+                    }
+                  >
+                    {nav}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-
-      {/* Mobile Menu Toggle Button */}
-      <button
-        type="button"
-        onClick={() => setIsOpen((open) => !open)}
-        className={`cursor-pointer transition-colors duration-300 md:hidden ${
-          hasSolidBackground
-            ? "text-white hover:text-slate-200"
-            : "text-slate-900 hover:text-primary"
-        }`}
-        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-        aria-expanded={isOpen}
-        aria-controls="main-navigation"
-      >
-        {isOpen ? <X size={30} /> : <Menu size={30} />}
-      </button>
-
-      {/* Navigation Links */}
-      <nav
-        id="main-navigation"
-        className={`w-full overflow-hidden transition-all duration-300 ease-in-out md:w-auto md:max-h-none md:translate-y-0 md:overflow-visible md:pt-0 md:opacity-100 ${
-          isOpen
-            ? "max-h-64 translate-y-0 pt-4 opacity-100"
-            : "max-h-0 -translate-y-2 pt-0 opacity-0"
-        }`}
-      >
-        <ul className="flex list-none flex-col items-end md:items-center gap-4 md:flex-row md:gap-8">
-          {navLinks.map((item) => (
-            <li key={item.link}>
-              <a
-                href={item.link}
-                onClick={() => setIsOpen(false)}
-                className={`font-space-grotesk text-base sm:text-lg transition-colors duration-300 font-medium ${
-                  hasSolidBackground
-                    ? "text-white hover:text-slate-200"
-                    : "text-slate-800 hover:text-primary"
-                }`}
-              >
-                {item.nav}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </header>
   );
 };
