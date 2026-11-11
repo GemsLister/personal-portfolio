@@ -18,7 +18,7 @@ const certifications: Certification[] = [
     description:
       "Micro-credentials course covering artificial intelligence fundamentals, ethical AI frameworks, data privacy, and responsible technology usage.",
     credentialId: "Y8Z48Q66YEAQZ",
-    credentialUrl: "/certificates/Lopez_ClassOf2026_issued.pdf",
+    credentialUrl: "/certificates/Lopez_ClassOf2026__issued.pdf",
     type: "Micro-Credential",
   },
   {
@@ -64,9 +64,12 @@ const certifications: Certification[] = [
 
 export const CertificationsSection = () => {
   return (
-    <section className="mx-auto max-w-5xl px-5 py-12 md:py-20 lg:py-24">
+    <section
+      id="certifications"
+      className="scroll-mt-24 mx-auto max-w-5xl px-5 py-12 md:py-20 lg:py-24"
+    >
       <div className="mb-6">
-        <h2 className="font-space-grotesk text-2xl font-bold tracking-tight text-primary sm:text-3xl md:text-5xl">
+        <h2 className="font-space-grotesk text-4xl font-bold tracking-tight text-primary sm:text-3xl md:text-5xl">
           CERTIFICATIONS
         </h2>
       </div>
