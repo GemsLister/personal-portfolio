@@ -9,30 +9,23 @@ import ReactLogo from "../../assets/logos/languages-frameworks/reactjs.svg";
 import TailwindCSSLogo from "../../assets/logos/languages-frameworks/tailwindcss.svg";
 import TypescriptLogo from "../../assets/logos/languages-frameworks/typescript.svg";
 // Database and Tools
-import CanvaLogo from "../../assets/logos/database-tools/canva.png";
 import FigmaLogo from "../../assets/logos/database-tools/figma.svg";
 import GitLogo from "../../assets/logos/database-tools/git.svg";
 import GithubLogo from "../../assets/logos/database-tools/github.svg";
 import MySQLLogo from "../../assets/logos/database-tools/mysql.png";
-import NodeJSLogo from "../../assets/logos/database-tools/nodejs.svg";
 import PostgreSQLLogo from "../../assets/logos/database-tools/pg.svg";
 import PostmanLogo from "../../assets/logos/database-tools/postman.svg";
 
 export const languagesFrameworks = [
   {
-    name: "Bootstrap",
-    image: BootstrapLogo,
-    label: "Bootstrap",
+    name: "HTML",
+    image: HTMLLogo,
+    label: "HTML",
   },
   {
     name: "CSS",
     image: CSSLogo,
     label: "CSS",
-  },
-  {
-    name: "HTML",
-    image: HTMLLogo,
-    label: "HTML",
   },
   {
     name: "JavaScript",
@@ -50,6 +43,16 @@ export const languagesFrameworks = [
     label: "React",
   },
   {
+    name: "Bootstrap",
+    image: BootstrapLogo,
+    label: "Bootstrap",
+  },
+  {
+    name: "Tailwind CSS",
+    image: TailwindCSSLogo,
+    label: "Tailwind CSS",
+  },
+  {
     name: "PHP",
     image: PHPLogo,
     label: "PHP",
@@ -59,23 +62,18 @@ export const languagesFrameworks = [
     image: LaravelLogo,
     label: "Laravel",
   },
-  {
-    name: "Tailwind CSS",
-    image: TailwindCSSLogo,
-    label: "Tailwind CSS",
-  },
 ];
 
 export const databaseTools = [
   {
-    name: "Canva",
-    image: CanvaLogo,
-    label: "Canva",
+    name: "MySQL",
+    image: MySQLLogo,
+    label: "MySQL",
   },
   {
-    name: "Figma",
-    image: FigmaLogo,
-    label: "Figma",
+    name: "PostgreSQL",
+    image: PostgreSQLLogo,
+    label: "PostgreSQL",
   },
   {
     name: "Git",
@@ -88,24 +86,14 @@ export const databaseTools = [
     label: "Github",
   },
   {
-    name: "MySQL",
-    image: MySQLLogo,
-    label: "MySQL",
-  },
-  {
-    name: "NodeJS",
-    image: NodeJSLogo,
-    label: "NodeJS",
-  },
-  {
-    name: "PostgreSQL",
-    image: PostgreSQLLogo,
-    label: "PostgreSQL",
-  },
-  {
     name: "Postman",
     image: PostmanLogo,
     label: "Postman",
+  },
+  {
+    name: "Figma",
+    image: FigmaLogo,
+    label: "Figma",
   },
 ];
 
@@ -122,7 +110,7 @@ export const TechnicalSkillsSection = () => {
       {/* Languages & Frameworks Group */}
       <div className="mt-10">
         <h3 className="text-xl md:text-2xl text-slate-950 font-bold font-space-grotesk mb-6">
-          Languages & Frameworks
+          Programming Languages & Frameworks
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {languagesFrameworks.map((languageFramework, index) => (
@@ -146,7 +134,7 @@ export const TechnicalSkillsSection = () => {
       {/* Database & Tools Group */}
       <div className="mt-12">
         <h3 className="text-xl md:text-2xl text-slate-950 font-bold font-space-grotesk mb-6">
-          Database & Tools
+          Databases & Development Tools
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {databaseTools.map((databaseTool, index) => (
