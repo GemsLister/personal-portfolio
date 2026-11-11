@@ -3,7 +3,10 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export const ContactSection = () => {
   return (
-    <section className="px-5 py-16 md:py-24 max-w-7xl mx-auto bg-brand-maroon text-white rounded-3xl my-12">
+    <section
+      id="contact"
+      className="flex flex-col gap-5 scroll-mt-24 px-5 py-16 md:py-24 max-w-7xl mx-auto bg-brand-maroon text-white rounded-3xl my-12"
+    >
       <div className="flex flex-col md:flex-row md:justify-between gap-8">
         <div>
           <span className="font-mono text-xs font-semibold tracking-wider text-primary">
