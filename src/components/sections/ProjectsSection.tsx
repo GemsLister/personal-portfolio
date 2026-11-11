@@ -22,7 +22,7 @@ const projects = [
       "JWT",
     ],
     githubRepo: "https://github.com/GemsLister/Fynlo",
-    url: "https://fynlo-theta.vercel.app/",
+    url: "https://fynlo-budget-tracker.vercel.app/",
     icon: [faPlay, faGithub],
   },
   {
