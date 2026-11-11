@@ -49,10 +49,10 @@ export const HeroSection = () => {
           {/* Bio Copy */}
           <p className="mt-5 font-plus-jakarta-sans text-base md:text-lg font-medium text-slate-700 leading-relaxed max-w-2xl">
             A Bachelor of Science in Information Technology (BSIT) student and
-            aspiring frontend & mobile developer who loves turning complex ideas
-            into clear, welcoming digital experiences. I focus on crafting
-            responsive interfaces with React, TypeScript, and modern styling
-            tools.
+            aspiring Frontend Developer who enjoys turning complex ideas into
+            clear, welcoming digital experiences. I focus on building
+            responsive, user-friendly interfaces using React, TypeScript, and
+            modern styling tools.
           </p>
 
           {/* Action Buttons Row (Primary + Outline Hierarchy) */}
