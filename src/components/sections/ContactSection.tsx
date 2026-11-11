@@ -16,8 +16,8 @@ export const ContactSection = () => {
             Let's build something impactful together.
           </h2>
           <p className="font-plus-jakarta-sans text-sm md:text-base text-slate-400 mt-3 max-w-xl">
-            Looking for a dedicated frontend or full-stack intern to join your
-            engineering team? I'd love to hear about your projects.
+            Looking for a passionate frontend developer intern to contribute to
+            your team? I'd love to connect and learn more about your projects.
           </p>
         </div>
       </div>
