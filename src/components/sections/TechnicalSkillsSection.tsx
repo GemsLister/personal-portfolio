@@ -111,7 +111,10 @@ export const databaseTools = [
 
 export const TechnicalSkillsSection = () => {
   return (
-    <section className="px-5 py-12 md:py-20 lg:py-24 max-w-7xl mx-auto">
+    <section
+      id="tools"
+      className="scroll-mt-24 px-5 py-12 md:py-20 lg:py-24 max-w-7xl mx-auto"
+    >
       <h2 className="font-space-grotesk text-4xl md:text-5xl font-bold text-primary tracking-tight">
         TECHNICAL SKILLS
       </h2>
