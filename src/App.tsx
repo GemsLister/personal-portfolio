@@ -6,10 +6,11 @@ import { CertificationsSection } from "./components/sections/CertificationsSecti
 import { ContactSection } from "./components/sections/ContactSection";
 import { Footer } from "./components/layouts/Footer";
 import { FadeInOnView } from "./components/FadeInOnView";
+import { BackToTopButton } from "./components/buttons/BackToTopButton";
 import "animate.css";
 function App() {
   return (
-    <div className="animate__animated animate__fadeIn h-screen">
+    <div id="top" className="animate__animated animate__fadeIn h-screen">
       <Header />
       <div className="flex flex-col">
         <FadeInOnView>
@@ -31,6 +32,7 @@ function App() {
       <FadeInOnView>
         <Footer />
       </FadeInOnView>
+      <BackToTopButton />
     </div>
   );
 }
