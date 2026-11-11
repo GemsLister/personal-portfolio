@@ -1,75 +1,73 @@
-# React + TypeScript + Vite
+# James Lester Lopez — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive personal portfolio built with React, TypeScript, Vite, and Tailwind CSS. It introduces James and showcases selected projects, technical skills, certifications, and contact information.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive layout with a persistent header and compact icon navigation on small screens
+- Smooth links to the portfolio sections and a back-to-top button
+- Sections fade in as they enter the viewport, with a page-load animation
+- Project cards with project, demo, and source links
+- Certification links and contact call to action
+- Reduced-motion support for scrolling and reveal animations
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 and TypeScript
+- Vite
+- Tailwind CSS 4
+- Lucide React and Font Awesome icons
+- Animate.css
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js supported by the installed Vite version
+- npm
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Install and run
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Vite prints the local development URL in the terminal.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Available scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server |
+| `npm run build` | Type-check and create a production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
 
+## Project structure
+
+```text
+public/
+  certificates/       Certification documents
+  favicon.svg
+src/
+  assets/             Profile image, project images, and skill logos
+  components/
+    buttons/          Reusable buttons
+    containers/       Reusable content containers
+    layouts/          Header and footer
+    sections/         Hero, projects, skills, certifications, and contact
+  App.tsx             Page composition
+  index.css           Global styles, theme, and fonts
 ```
+
+## Updating portfolio content
+
+- Edit project details and links in `src/components/sections/ProjectsSection.tsx`.
+- Update skills and their logos in `src/components/sections/TechnicalSkillsSection.tsx` and `src/assets/logos/`.
+- Update certification details in `src/components/sections/CertificationsSection.tsx` and add documents under `public/certificates/`.
+- Update the introduction, social links, and contact information in the relevant files under `src/components/sections/`.
+
+## Production
+
+Run `npm run build`, then deploy the generated `dist/` directory to a static hosting provider that supports single-page applications.
