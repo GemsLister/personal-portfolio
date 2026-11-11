@@ -14,7 +14,7 @@ const socialLinks = [
   {
     icon: faLinkedin,
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/james-lester-lopez-0a6695366/",
+    url: "https://www.linkedin.com/in/jameslesterlopez",
   },
   {
     icon: faEnvelope,
