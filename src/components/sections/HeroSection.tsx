@@ -57,7 +57,7 @@ export const HeroSection = () => {
 
           {/* Action Buttons Row (Primary + Outline Hierarchy) */}
           <div className="flex flex-wrap items-center gap-4 mt-6">
-            <PrimaryButton>View Projects</PrimaryButton>
+            <PrimaryButton href="#projects">View Projects</PrimaryButton>
             <SecondaryButton>
               View Resume
               <FontAwesomeIcon icon={faFile} />
