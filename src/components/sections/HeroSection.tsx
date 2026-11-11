@@ -43,7 +43,7 @@ export const HeroSection = () => {
               Hi, <span className="text-primary">I'm James Lester Lopez</span>
             </span>
             <h1 className="text-slate-950">I build thoughtful</h1>
-            <span className="text-primary">things for web and mobile.</span>
+            <span className="text-primary">responsive web applications.</span>
           </div>
 
           {/* Bio Copy */}
