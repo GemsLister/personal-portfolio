@@ -32,7 +32,7 @@ const projects = [
       "A court reservation app for browsing pickleball facilities, booking court time, and renting equipment. Includes player accounts and an admin area for managing facilities and reservations.",
     techStack: ["Laravel", "PHP", "Vite", "PostgreSQL", "Docker"],
     githubRepo: "https://github.com/GemsLister/PickleSlot",
-    url: "https://pickleslot.onrender.com/",
+    url: "https://pickleslot-production.up.railway.app/",
     icon: [faPlay, faGithub],
   },
 ];
