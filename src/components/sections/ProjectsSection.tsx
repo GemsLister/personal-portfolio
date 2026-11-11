@@ -85,8 +85,9 @@ export const ProjectsSection = () => {
           aria-label="Projects"
           className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth scrollbar-none md:snap-none md:overflow-visible"
         >
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <ProjectContainer
+              key={index}
               name={project.name}
               image={project.image}
               description={project.description}
