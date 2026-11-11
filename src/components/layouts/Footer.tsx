@@ -1,8 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export const Footer = () => {
@@ -17,7 +14,7 @@ export const Footer = () => {
             James Lester Lopez
           </span>
           <p className="font-plus-jakarta-sans text-sm text-slate-500 mt-1">
-            Frontend Engineering/Developer Intern
+            Aspiring Frontend Developer
           </p>
         </div>
 
@@ -50,7 +47,6 @@ export const Footer = () => {
               <FontAwesomeIcon icon={faEnvelope} className="text-base" />
             </a>
           </div>
-
           <p className="font-plus-jakarta-sans text-xs text-slate-400">
             © {currentYear} James Lester Lopez. All rights reserved.
           </p>
