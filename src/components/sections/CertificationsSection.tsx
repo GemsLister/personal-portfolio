@@ -12,6 +12,16 @@ export interface Certification {
 
 const certifications: Certification[] = [
   {
+    title: "JavaScript Essentials 1",
+    issuer: "Cisco Networking Academy / BukSU",
+    date: "Nov 2026",
+    description:
+      "Covers fundamental JavaScript concepts including ES6+ syntax, control flow, functions, arrays, objects, and scope. Validates core scripting and algorithmic problem-solving skills.",
+    credentialUrl:
+      "/certificates/JavaScript_Essentials_1_certificate_2301106198-student-buksu-edu-ph_994a3655-fba2-41c2-b384-a92a724c8777.pdf",
+    type: "Coursework",
+  },
+  {
     title: "Introduction to AI Literacy and Responsible Use",
     issuer: "Mapúa University & CHED",
     date: "Sep 2026",
@@ -33,7 +43,7 @@ const certifications: Certification[] = [
   {
     title: "CCNA: Switching, Routing, and Wireless Essentials",
     issuer: "Cisco Networking Academy / BukSU",
-    date: "2025",
+    date: "Dec 2025",
     description:
       "Covers intermediate enterprise networking principles, including VLAN segmentation, inter-VLAN routing, EtherChannel bundling, STP, WLAN configurations, and Layer 2 security hardening.",
     credentialUrl:
@@ -43,21 +53,11 @@ const certifications: Certification[] = [
   {
     title: "CCNA: Introduction to Networks",
     issuer: "Cisco Networking Academy / BukSU",
-    date: "2025",
+    date: "May 2025",
     description:
       "Covers foundational network architecture, IPv4/IPv6 addressing, subnetting, Ethernet switching fundamentals, network security basics, and initial router/switch configuration in Cisco IOS.",
     credentialUrl:
       "/certificates/_certificate_2301106198-student-buksu-edu-ph_995d1e13-f1bd-440a-88d1-7126fbb1714c.pdf",
-    type: "Coursework",
-  },
-  {
-    title: "JavaScript Essentials 1",
-    issuer: "Cisco Networking Academy / BukSU",
-    date: "2025",
-    description:
-      "Covers fundamental JavaScript concepts including ES6+ syntax, control flow, functions, arrays, objects, and scope. Validates core scripting and algorithmic problem-solving skills.",
-    credentialUrl:
-      "/certificates/JavaScript_Essentials_1_certificate_2301106198-student-buksu-edu-ph_994a3655-fba2-41c2-b384-a92a724c8777.pdf",
     type: "Coursework",
   },
 ];
