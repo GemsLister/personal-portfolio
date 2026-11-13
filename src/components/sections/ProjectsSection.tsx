@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ScrollButton } from "../buttons/ScrollButton";
 import PickleSlot from "../../assets/projects-image/pickleslot.png";
 import Fynlo from "../../assets/projects-image/fynlo.png";
+import MossAndMug from "../../assets/projects-image/moss-and-mug.png";
 import { ProjectContainer } from "../containers/ProjectContainer";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -35,6 +36,16 @@ const projects = [
     url: "https://pickleslot-production.up.railway.app/",
     icon: [faPlay, faGithub],
   },
+  {
+    name: "Moss & Mug",
+    image: MossAndMug,
+    description:
+      "A neighborhood café landing page for browsing menus, exploring the brand story, and planning a visit. Includes custom scroll-triggered animations and a responsive layout built with React, TypeScript, and Tailwind CSS.",
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Lucide React"],
+    githubRepo: "https://github.com/GemsLister/moss-and-mug",
+    url: "https://moss-and-mug.vercel.app/",
+    icon: [faPlay, faGithub],
+  },
 ];
 
 export const ProjectsSection = () => {
@@ -53,9 +64,9 @@ export const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="scroll-mt-24 px-5 py-12 md:py-20 lg:py-24"
+      className="scroll-mt-24 px-5 py-12 md:py-20 lg:py-24 max-w-7xl mx-auto"
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto w-full">
         <div className="mb-6 flex items-center justify-between">
           <h1 className="font-space-grotesk text-4xl md:text-5xl font-bold text-primary tracking-tight">
             PROJECTS
@@ -83,7 +94,7 @@ export const ProjectsSection = () => {
           ref={carouselRef}
           role="region"
           aria-label="Projects"
-          className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth scrollbar-none md:snap-none md:overflow-visible"
+          className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth scrollbar-none md:grid md:grid-cols-2 md:gap-6 md:snap-none md:overflow-visible lg:grid-cols-3"
         >
           {projects.map((project, index) => (
             <ProjectContainer
