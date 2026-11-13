@@ -21,7 +21,7 @@ export const ProjectContainer = ({
 }: ProjectContainerProps) => {
   return (
     <article
-      className="group w-full shrink-0 snap-center overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md transition-shadow duration-300 hover:shadow-xl md:w-[calc(50%-0.75rem)]"
+      className="group w-full shrink-0 snap-center overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md transition-shadow duration-300 hover:shadow-xl md:w-auto md:min-h-full"
       aria-label={name}
     >
       {/* Browser Header Bar */}
