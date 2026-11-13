@@ -66,7 +66,7 @@ export const CertificationsSection = () => {
   return (
     <section
       id="certifications"
-      className="scroll-mt-24 mx-auto max-w-5xl px-5 py-12 md:py-20 lg:py-24"
+      className="scroll-mt-24 mx-auto max-w-7xl px-5 py-12 md:py-20 lg:py-24"
     >
       <div className="mb-6">
         <h2 className="font-space-grotesk text-4xl font-bold tracking-tight text-primary sm:text-3xl md:text-5xl">
