@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Certificate, Folder, House, Mail, Wrench } from "lucide-react";
-
 const navLinks = [
   { nav: "Home", link: "#top", Icon: House },
   { nav: "Projects", link: "#projects", Icon: Folder },
@@ -36,7 +35,7 @@ export const Header = () => {
           className="rounded-lg bg-primary p-2 text-white shadow-sm transition-transform duration-300 hover:scale-105 md:hidden"
         >
           <span className="font-space-grotesk text-base font-bold leading-none">
-            JL
+            {"{JL}"}
           </span>
         </a>
 
@@ -47,7 +46,7 @@ export const Header = () => {
             className="hidden rounded-lg bg-primary p-2.5 text-white shadow-sm transition-transform duration-300 hover:scale-105 md:block"
           >
             <span className="font-space-grotesk text-lg font-bold leading-none">
-              JL
+              {"{JL}"}
             </span>
           </a>
         )}
