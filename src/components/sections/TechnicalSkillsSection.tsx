@@ -9,6 +9,7 @@ import ReactLogo from "../../assets/logos/languages-frameworks/reactjs.svg";
 import TailwindCSSLogo from "../../assets/logos/languages-frameworks/tailwindcss.svg";
 import TypescriptLogo from "../../assets/logos/languages-frameworks/typescript.svg";
 // Database and Tools
+import ExpressLogo from "../../assets/logos/database-tools/expressjs.svg";
 import FigmaLogo from "../../assets/logos/database-tools/figma.svg";
 import GitLogo from "../../assets/logos/database-tools/git.svg";
 import GithubLogo from "../../assets/logos/database-tools/github.svg";
@@ -61,6 +62,11 @@ export const languagesFrameworks = [
     name: "Laravel",
     image: LaravelLogo,
     label: "Laravel",
+  },
+  {
+    name: "Express",
+    image: ExpressLogo,
+    label: "Express",
   },
 ];
 
