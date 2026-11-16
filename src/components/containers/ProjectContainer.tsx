@@ -7,7 +7,7 @@ type ProjectContainerProps = {
   image: string;
   description: string;
   techStack: string[];
-  url: string;
+  url?: string;
   githubRepo: string;
 };
 
@@ -31,7 +31,7 @@ export const ProjectContainer = ({
           <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
           <span className="h-2.5 w-2.5 rounded-full bg-green-500/80" />
           <span className="ml-2 font-mono text-[10px] text-slate-400">
-            {new URL(url).host}
+            {new URL(url ?? githubRepo).host}
           </span>
         </div>
         <div className="aspect-video overflow-hidden">
@@ -52,17 +52,19 @@ export const ProjectContainer = ({
 
           {/* Live Demo and Github Repository Links */}
           <div className="flex gap-3">
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`View live demo for ${name}`}
-            >
-              <FontAwesomeIcon
-                icon={faPlay}
-                className="text-primary hover:text-primary-hover text-2xl transition-all ease-in-out duration-300"
-              />
-            </a>
+            {url && (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View live demo for ${name}`}
+              >
+                <FontAwesomeIcon
+                  icon={faPlay}
+                  className="text-primary hover:text-primary-hover text-2xl transition-all ease-in-out duration-300"
+                />
+              </a>
+            )}
             <a
               href={githubRepo}
               target="_blank"

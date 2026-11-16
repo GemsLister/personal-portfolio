@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ScrollButton } from "../buttons/ScrollButton";
+import EduQuest from "../../assets/projects-image/eduquest.png";
 import PickleSlot from "../../assets/projects-image/pickleslot.png";
 import Fynlo from "../../assets/projects-image/fynlo.png";
 import MossAndMug from "../../assets/projects-image/moss-and-mug.png";
@@ -9,6 +10,15 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 const projects = [
+  {
+    name: "EduQuest",
+    image: EduQuest,
+    description:
+      "A quiz management platform for instructors, featuring quiz creation, student performance analytics, and AI-powered Bloom's Taxonomy analysis. Includes web and mobile apps.",
+    techStack: ["React", "Supabase", "Tailwind CSS", "Gemini AI"],
+    githubRepo: "https://github.com/GemsLister/eduquest",
+    icon: [faGithub],
+  },
   {
     name: "Fynlo",
     image: Fynlo,
@@ -41,7 +51,7 @@ const projects = [
     image: MossAndMug,
     description:
       "A neighborhood café landing page for browsing menus, exploring the brand story, and planning a visit. Includes custom scroll-triggered animations and a responsive layout built with React, TypeScript, and Tailwind CSS.",
-    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Lucide React"],
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     githubRepo: "https://github.com/GemsLister/moss-and-mug",
     url: "https://moss-and-mug.vercel.app/",
     icon: [faPlay, faGithub],
